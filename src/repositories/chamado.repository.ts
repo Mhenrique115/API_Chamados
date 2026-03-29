@@ -56,11 +56,11 @@ export class ChamadoRepository {
   async getDashboardStats() {
     const chamados = await prisma.chamado.findMany({
       include: {
-        usuario: { select: { id: true, username: true } },
+        usuario: { select: { id: true, username: true, role: true } },
         tarefas: true,
       },
     });
 
     return chamados;
   }
-}
+};

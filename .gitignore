@@ -1,18 +1,29 @@
 # ============================================================
-#  HelpDesk — .gitignore
+#  HelpDesk Backend — .gitignore
 # ============================================================
 
 # ───────────────────────────────
-#  Node / Backend
+#  Node
 # ───────────────────────────────
 node_modules/
-backend/node_modules/
-backend/dist/
-backend/.env
-backend/.env.local
-backend/.env.*.local
+dist/
 
-# Logs
+# ───────────────────────────────
+#  Ambiente
+# ───────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ───────────────────────────────
+#  Prisma
+# ───────────────────────────────
+node_modules/.prisma/
+src/generated/
+
+# ───────────────────────────────
+#  Logs
+# ───────────────────────────────
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -20,19 +31,9 @@ yarn-error.log*
 pnpm-debug.log*
 
 # ───────────────────────────────
-#  Prisma
+#  TypeScript
 # ───────────────────────────────
-# Manter schema.prisma e migrations, ignorar só o client gerado
-backend/node_modules/.prisma/
-backend/src/generated/
-
-# ───────────────────────────────
-#  Frontend
-# ───────────────────────────────
-# Sem build no frontend (Vanilla JS puro), nada a ignorar
-# exceto se usar bundler futuramente:
-frontend/dist/
-frontend/.parcel-cache/
+*.tsbuildinfo
 
 # ───────────────────────────────
 #  Sistema Operacional
@@ -40,9 +41,6 @@ frontend/.parcel-cache/
 .DS_Store
 .DS_Store?
 ._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 desktop.ini
 
@@ -55,23 +53,6 @@ desktop.ini
 .idea/
 *.swp
 *.swo
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.sublime-project
-*.sublime-workspace
-
-# ───────────────────────────────
-#  TypeScript
-# ───────────────────────────────
-*.tsbuildinfo
-
-# ───────────────────────────────
-#  Testes (se adicionar futuramente)
-# ───────────────────────────────
-coverage/
-.nyc_output/
 
 # ───────────────────────────────
 #  Miscelânea
@@ -80,3 +61,5 @@ coverage/
 *.tar.gz
 *.bak
 *.tmp
+coverage/
+.nyc_output/

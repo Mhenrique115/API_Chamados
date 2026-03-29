@@ -9,7 +9,7 @@ import chamadoRoutes from './routes/chamado.routes';
 import { errorHandler } from './middlewares/error.middleware';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 // Security
 app.use(helmet());
@@ -57,7 +57,7 @@ app.use((_req, res) => {
 // Error handler
 app.use(errorHandler);
 
-app.listen(PORT, '127.0.0.1', () => {
+app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`📋 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
