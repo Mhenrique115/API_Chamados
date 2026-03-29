@@ -2,7 +2,7 @@
 
 API REST do sistema de gestão de chamados (Help Desk), construída com Node.js + TypeScript.
 
-**Frontend:** [System_Task](https://github.com/Mhenrique115/System_Task) — [Demo](https://github.com/Mhenrique115/System_Task/)
+**Frontend:** [System_Task](https://github.com/Mhenrique115/System_Task) — [Demo](https://mhenrique115.github.io/System_Task/)
 
 ---
 
